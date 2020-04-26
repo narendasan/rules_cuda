@@ -37,7 +37,7 @@ cu_library = rule(
         "gpu_arch": attr.string(
             doc = "Target GPU Architecture"
         ),
-        "gen_code": attr.string_list(
+        "gencode": attr.string_list(
             doc = "Other architectures to compile PTX for"
         ),
         "defines": attr.label_list(),
@@ -74,7 +74,7 @@ cu_binary = rule(
         "gpu_arch": attr.string(
             doc = "Target GPU Architecture"
         ),
-        "gen_code": attr.string_list(
+        "gencode": attr.string_list(
             doc = "Other architectures to compile PTX for"
         ),
         "defines": attr.label_list(),

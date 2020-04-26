@@ -53,7 +53,7 @@ def generate_copts(ctx, compiler):
     arch = "--gpu-architecture=" + ctx.attr.gpu_arch
     copts.append(arch)
     # Other supported architectures
-    for a in ctx.attr.gen_code:
+    for a in ctx.attr.gencode:
         copts.append("-gencode=" + a)
     # Append any other passed copts (if they are not black listed)
     for c in ctx.attr.copts:
