@@ -18,10 +18,10 @@
 # File: DL4AGX/tools/nvcc/cuda.bzl
 # Description: Declaration of cuda bazel rules
 ##########################################################################
-load("//tools/nvcc:private/constants.bzl", _CUDA_ACCEPTABLE_EXTENSIONS = "CUDA_ACCEPTABLE_EXTENSIONS",
+load("//cuda:private/constants.bzl", _CUDA_ACCEPTABLE_EXTENSIONS = "CUDA_ACCEPTABLE_EXTENSIONS",
                                            _CUDA_ACCEPTABLE_HDR_EXTENSIONS = "CUDA_ACCEPTABLE_HDR_EXTENSIONS")
-load("//tools/nvcc:private/cu_library_impl.bzl", _cu_library_impl = "cu_library_impl")
-load("//tools/nvcc:private/cu_binary_impl.bzl", _cu_binary_impl = "cu_binary_impl")
+load("//cuda:private/cu_library_impl.bzl", _cu_library_impl = "cu_library_impl")
+load("//cuda:private/cu_binary_impl.bzl", _cu_binary_impl = "cu_binary_impl")
 
 cu_library = rule(
     implementation = _cu_library_impl,
