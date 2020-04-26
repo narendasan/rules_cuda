@@ -19,10 +19,10 @@
 # Description: Declaration of cuda bazel rules
 ##########################################################################
 
-load("//cuda:private/constants.bzl", "CUDA_ACCEPTABLE_BIN_EXTENSIONS", "CUDA_ACCEPTABLE_SRC_EXTENSIONS", "CUDA_ACCEPTABLE_HDR_EXTENSIONS")
-load("//cuda:private/utils.bzl", "get_toolchain_info", "split_srcs", "CuInfo", "CuLinkingContext")
-load("//cuda:private/compile.bzl", "cu_compile_sources")
-load("//cuda:private/device_link.bzl", "cu_link_device_code")
+load("//cuda/private:constants.bzl", "CUDA_ACCEPTABLE_BIN_EXTENSIONS", "CUDA_ACCEPTABLE_SRC_EXTENSIONS", "CUDA_ACCEPTABLE_HDR_EXTENSIONS")
+load("//cuda/private:utils.bzl", "get_toolchain_info", "split_srcs", "CuInfo", "CuLinkingContext")
+load("//cuda/private:compile.bzl", "cu_compile_sources")
+load("//cuda/private:device_link.bzl", "cu_link_device_code")
 
 def cu_bin_link(ctx, name, objs, out, linkopts):
     '''

@@ -18,7 +18,7 @@
 # File: DL4AGX/tools/private/device_link.bzl
 # Description: Declaration of cuda bazel rules
 ##########################################################################
-load("//cuda:private/utils.bzl", "CuInfo", "CuLinkingContext", "get_depset_info")
+load("//cuda/private:utils.bzl", "CuInfo", "CuLinkingContext", "get_depset_info")
 
 def cu_lib_device_link(ctx, name, objs, out, linkopts):
     '''

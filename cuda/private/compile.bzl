@@ -18,7 +18,7 @@
 # File: DL4AGX/tools/nvcc/private/compile.bzl
 # Description: Declaration of cuda bazel rules
 ##########################################################################
-load("//cuda:private/utils.bzl", "split_srcs")
+load("//cuda/private:utils.bzl", "split_srcs")
 
 def cu_compile(ctx, name, srcs_outs, includes, defines, hdrs, copts):
     '''
