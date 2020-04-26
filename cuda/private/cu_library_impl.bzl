@@ -1,4 +1,5 @@
 ##########################################################################
+# Copyright (c) 2020 Naren Dasan. All rights reserved.
 # Copyright (c) 2018-2019 NVIDIA Corporation. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Original Source: 
 # File: DL4AGX/tools/nvcc/private/cu_library_impl.bzl
-# Description: Implementation of the cu_library rule
+# Description: Declaration of cuda bazel rules
 ##########################################################################
 
 load("//cuda:private/constants.bzl", "CUDA_ACCEPTABLE_BIN_EXTENSIONS", "CUDA_ACCEPTABLE_SRC_EXTENSIONS", "CUDA_ACCEPTABLE_HDR_EXTENSIONS")
