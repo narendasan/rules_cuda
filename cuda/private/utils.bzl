@@ -18,7 +18,6 @@
 # File: DL4AGX/tools/nvcc/private/utils.bzl
 # Description: Declaration of cuda bazel rules
 ##########################################################################
-load("@bazel_skylib//lib:shell.bzl", "shell")
 load("@bazel_tools//tools/cpp:toolchain_utils.bzl", "find_cpp_toolchain")
 load(
     "@bazel_tools//tools/build_defs/cc:action_names.bzl",
