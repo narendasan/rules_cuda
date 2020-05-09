@@ -32,6 +32,7 @@ def cu_lib_link_shared(ctx, name, linker, objs, out, linkopts):
                                                                       linkopts=" ".join([l for l in linkopts]),
                                                                       objs=" ".join([obj.path for obj in objs]),
                                                                       out=out.path)
+    print(cmd)
     ctx.actions.run_shell(
         command=cmd,
         inputs=objs,
@@ -47,10 +48,12 @@ def cu_lib_link_static(ctx, name, linker, objs, out, linkopts):
     '''
     Links up all of the obj files into a .a file
     '''
+    print(objs)
     cmd = "{linker} crf {out} {linkopts} {objs} ".format(linker=linker,
                                                          linkopts=" ",#.join([l for l in linkopts]),
                                                          objs=" ".join([obj.path for obj in objs]),
                                                          out=out.path)
+    print(cmd)
     ctx.actions.run_shell(
         command=cmd,
         inputs=objs,

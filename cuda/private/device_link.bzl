@@ -27,6 +27,7 @@ def cu_lib_device_link(ctx, name, objs, out, linkopts):
     cmd = "nvcc {linkopts} --compiler-options -fPIC -dlink -rdc=true {objs} -o {out}".format(linkopts=" ".join([l for l in linkopts]),
                                                                                              objs=" ".join([obj.path for obj in objs]),
                                                                                              out=out.path)
+    print(cmd)
     ctx.actions.run_shell(
         command=cmd,
         inputs=objs,
